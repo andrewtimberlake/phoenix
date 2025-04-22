@@ -82,7 +82,7 @@ defmodule <%= @web_namespace %>.Layouts do
         id="server-error"
         kind={:error}
         title=<%= maybe_heex_attr_gettext.("Something went wrong!", @gettext) %>
-        phx-disconnected={show(".phx-client-error #client-error") |> JS.remove_attribute("hidden")}
+        phx-disconnected={show(".phx-server-error #client-error") |> JS.remove_attribute("hidden")}
         phx-connected={hide("#client-error") |> JS.set_attribute({"hidden", ""})}
         hidden
       >
